@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hire Freelance Technical Writer | API Docs & SaaS Content</title>
+  <meta name="description" content="Hire freelance technical writer Tushar Borse. API documentation, tutorials, and SaaS content. Fast, clear, and affordable technical writing services." />
+  <link rel="canonical" href="https://www.tusharborse.in/landing" />
+  <meta name="robots" content="noindex, nofollow" /> <!-- Prevent SEO indexing (for ads only) -->
+
+  <!-- Social / Open Graph -->
+  <meta property="og:title" content="Hire Freelance Technical Writer" />
+  <meta property="og:description" content="Freelance API documentation & SaaS content writing by Tushar Borse. Get clear, developer-friendly docs and tutorials." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tusharborse.in/landing" />
+  <meta property="og:image" content="https://www.tusharborse.in/og-image.jpg" />
+
+  <!-- ✅ Google Ads Global Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXXX'); // Replace with your Google Ads ID
+  </script>
+
+  <style>
+    body {margin:0;font-family:Inter,system-ui,sans-serif;background:#0b1220;color:#e2e8f0;}
+    .container{max-width:720px;margin:0 auto;padding:20px;text-align:center}
+    h1{font-size:36px;margin:20px 0;line-height:1.2}
+    p{font-size:18px;color:#cbd5e1;}
+    .btn{display:inline-block;margin:10px;padding:14px 20px;border-radius:12px;font-weight:600;text-decoration:none}
+    .primary{background:linear-gradient(135deg,#0ea5e9,#22d3ee);color:#001018;box-shadow:0 10px 20px rgba(2,8,23,.4)}
+    .secondary{border:1px solid rgba(148,163,184,.3);color:#cbd5e1}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(148,163,184,.15);border-radius:16px;padding:20px;margin:20px 0;}
+    .price{font-size:28px;font-weight:800;margin:10px 0}
+    form{display:grid;gap:12px;margin-top:20px}
+    .input{padding:12px;border-radius:10px;border:1px solid rgba(148,163,184,.25);background:rgba(255,255,255,.02);color:#e2e8f0}
+    footer{margin-top:40px;font-size:14px;color:#94a3b8}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hire a Freelance Technical Writer</h1>
+    <p>Clear API documentation, tutorials, and SaaS content — delivered on time by <strong>Tushar Borse</strong>.</p>
+
+    <div class="card">
+      <h2>Why Choose Me?</h2>
+      <ul style="list-style:none;padding:0;line-height:1.8">
+        <li>✅ API & software documentation</li>
+        <li>✅ Developer-friendly tutorials</li>
+        <li>✅ SEO-driven technical blogs</li>
+        <li>✅ Affordable, fast, reliable</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Starter Pricing</h2>
+      <p class="price">Blog / Tutorial: ₹2,000 (~$24)</p>
+      <p class="price">API Quickstart: ₹4,500 (~$54)</p>
+      <p class="price">Custom Docs Bundle: Flexible</p>
+    </div>
+
+    <a class="btn primary" data-tel href="#">📞 Call Now</a>
+    <a class="btn secondary" data-wa href="#">💬 WhatsApp</a>
+
+    <div class="card">
+      <h2>Get a Free Quote</h2>
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input class="input" type="text" name="name" placeholder="Your Name" required>
+        <input class="input" type="email" name="email" placeholder="Your Email" required>
+        <textarea class="input" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+        <button class="btn primary" type="submit">Send Request</button>
+        <p id="form-status"></p>
+      </form>
+    </div>
+
+    <footer>
+      <p>© <span id="y"></span> Tushar Borse — Freelance Technical Writer</p>
+    </footer>
+  </div>
+
+  <!-- ✅ Conversion Tracking Snippet -->
+  <script>
+    function reportConversion() {
+      gtag('event', 'conversion', {
+          'send_to': 'AW-XXXXXXXXXX/abcd1234xyz' // Replace with your Conversion ID
+      });
+    }
+  </script>
+
+  <script>
+    const PHONE_NUMBER = '+919284779097';
+    const WHATSAPP_NUMBER = '919284779097';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-tel]').forEach(a => a.href = `tel:${PHONE_NUMBER}`);
+      document.querySelectorAll('[data-wa]').forEach(a => a.href = `https://wa.me/${WHATSAPP_NUMBER}`);
+      document.getElementById('y').textContent = new Date().getFullYear();
+    });
+
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = 'Sending…';
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+        if (res.ok) {
+          form.reset();
+          statusEl.textContent = 'Thanks! I will get back to you shortly.';
+
+          // ✅ Trigger conversion event when form is successfully submitted
+          gtag('event', 'conversion', {
+            'send_to': 'AW-XXXXXXXXXX/abcd1234xyz' // Replace with your Conversion ID
+          });
+        } else {
+          statusEl.textContent = 'Something went wrong. Please email me directly.';
+        }
+      } catch (err) {
+        statusEl.textContent = 'Network error. Please email me directly.';
+      }
+    });
+  </script>
+</body>
+</html>
